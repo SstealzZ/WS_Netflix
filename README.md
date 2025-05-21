@@ -81,16 +81,24 @@ After starting the containers, you can access the services at:
 2. Configure the following settings:
    - Add `/movies` as your root folder
    - Set up Jackett as an indexer using the API key from the previous step
-   - Configure download client settings
+   - Note: We will not configure a download client in this workshop
 
 ## Test the Setup
 
-We'll test our setup using the freely available movie "Big Buck Bunny":
+Since this workshop does not use a download client for educational and legal reasons, we will test the setup manually with the open-source movie "Big Buck Bunny":
 
-1. Download "Big Buck Bunny" from [its official site](https://peach.blender.org/download/)
-2. Place the downloaded file in the `downloads` directory
-3. In Radarr, add "Big Buck Bunny" to your library and set it to use the local file
-4. Verify that Plex detects and plays the movie correctly
+1. Manually download "Big Buck Bunny" from [its official site](https://peach.blender.org/download/)
+2. Place the downloaded file directly in the `movies` directory (not in `downloads`)
+3. In Radarr:
+   - Go to "Movies" then click "Add New Movie"
+   - Search for "Big Buck Bunny" and select it
+   - Set your root folder to `/movies`
+   - Under "Movie Path", ensure it points to where you placed the file
+   - Click "Add Movie"
+4. In Plex, scan your library to detect the new media
+5. Verify that the movie appears correctly in both Radarr and Plex
+
+**Note**: In a complete system, Radarr would communicate with a download client like Transmission, but this functionality is not implemented in this workshop. By manually adding the movie to Radarr, you can still experience how Radarr manages your media library.
 
 ## Directory Structure
 
